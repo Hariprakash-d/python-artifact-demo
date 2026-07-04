@@ -9,13 +9,21 @@ on:
 
 jobs:
   Create-Artifact:
-    runs-on: self-hosted    
-    container:
-      image: ubuntu:22.04
+    runs-on: self-hosted
       
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
+
+      - name: Verify Python 3.11
+        run: |
+          python3.11 --version
+          python3.11 -m pip --version
+
+      - name: Install Project Dependencies
+        run: |
+          python3.11 -m pip install --upgrade pip
+          python3.11 -m pip install -r requirements.txt
 
       - name: setup Python
         uses: actions/setup-python@v5
