@@ -10,6 +10,10 @@ on:
 jobs:
   Create-Artifact:
     runs-on: self-hosted
+    
+    container:
+      image: ubuntu:22.04
+      
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
