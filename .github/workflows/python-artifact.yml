@@ -26,7 +26,7 @@ jobs:
 
 
       - name: check python version
-        run: python --version
+        run: python3.11 --version
 
       - name: Run Python Program
         run: python app.py
