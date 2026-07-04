@@ -9,8 +9,7 @@ on:
 
 jobs:
   Create-Artifact:
-    runs-on: self-hosted
-    
+    runs-on: self-hosted    
     container:
       image: ubuntu:22.04
       
